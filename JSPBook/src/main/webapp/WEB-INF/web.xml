@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/exceptionNoPage.jsp</location>
+	</error-page>
 	<security-role>
 		<description></description>
 		<role-name>admin</role-name>
@@ -11,6 +15,16 @@
 			<description></description>
 			<url-pattern>/addProduct.jsp</url-pattern>
 		</web-resource-collection>
-		<auth-constraint></auth-constraint>
+		<auth-constraint>
+			<description>권한 관리자명</description>
+			<role-name>admin</role-name>
+		</auth-constraint>
 	</security-constraint>
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/login.jsp</form-login-page>
+			<form-error-page>/login_failed.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
 </web-app>

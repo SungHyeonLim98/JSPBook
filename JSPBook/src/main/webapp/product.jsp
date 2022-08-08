@@ -3,6 +3,7 @@
 <%@ page import = "dto.Product" %>
 <%@ page import="dao.ProductRepository" %>
 <%@ page import="java.text.DecimalFormat" %>
+<%@ page errorPage="exceptionNoProductId.jsp" %>
 <jsp:useBean id="productDAO" class = "dao.ProductRepository" scope = "session" />
 
 <!DOCTYPE html>
