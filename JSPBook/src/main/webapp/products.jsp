@@ -10,9 +10,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <title>상품 목록</title>
-<link rel = "stylesheet" href = "https://maxcdn.bootstrap/4.0.0/css/bootstrap.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
 	<%@ include file = "menu.jsp" %>
@@ -36,6 +35,8 @@
 				
 			%>
 			<div class = "col-md-4">
+				<img src = "./resource/images/<%=product.getFilename() %>"
+				style = "width: 300px; height:250px">
 				<h3><%= product.getPname()%></h3>
 				<p><%= product.getDescription()%>
 				<p><%
